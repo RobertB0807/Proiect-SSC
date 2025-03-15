@@ -33,7 +33,6 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		return 
 	}
 
-	//tot ce e de aici in jos sa ma mai uit peste pentru a putea intelege ce se intmpla in cod
 	expectedPassword, ok := users[credentials.Username]
 
 	if !ok || expectedPassword != credentials.Password {
