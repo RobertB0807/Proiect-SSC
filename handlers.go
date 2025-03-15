@@ -32,7 +32,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusBadRequest)
 		return 
 	}
-
+	
 	expectedPassword, ok := users[credentials.Username]
 
 	if !ok || expectedPassword != credentials.Password {
@@ -40,6 +40,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		return 
 	}
 
+	//De revizuit putin codul pe maine
 	experationTime := time.Now().Add(time.Minute * 5)
 
 	claims := &Claims{
