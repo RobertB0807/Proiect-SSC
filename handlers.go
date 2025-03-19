@@ -138,11 +138,6 @@ func Refresh(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// if time.Unix(claims.ExpiresAt, 0).Sub(time.Now()) > 30*time.Second {
-	// 	w.WriteHeader(http.StatusBadRequest)
-	// 	return
-	// }
-
 	expirationTime := time.Now().Add(time.Minute * 5)
 
 	claims.ExpiresAt = expirationTime.Unix()
