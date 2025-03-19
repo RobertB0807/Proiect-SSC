@@ -5,7 +5,6 @@ import (
 	"net/http"
 )
 
-
 func main() {
 	http.HandleFunc("/login", Login)
 	http.HandleFunc("/home", Home)
